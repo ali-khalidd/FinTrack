@@ -2,6 +2,7 @@ import { NavLink } from 'react-router-dom'
 import {
   LayoutDashboard,
   ArrowLeftRight,
+  BookOpen,
   Target,
   Settings as SettingsIcon,
   Moon,
@@ -15,6 +16,7 @@ import { useAuth } from '../context/AuthContext'
 const navItems = [
   { to: '/', label: 'Dashboard', icon: LayoutDashboard, end: true },
   { to: '/transactions', label: 'Transactions', icon: ArrowLeftRight },
+  { to: '/ledger', label: 'Ledger', icon: BookOpen },
   { to: '/goals', label: 'Savings Goals', icon: Target },
   { to: '/settings', label: 'Settings', icon: SettingsIcon },
 ]

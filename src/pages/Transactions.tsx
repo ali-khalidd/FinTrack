@@ -21,7 +21,7 @@ export default function Transactions() {
   const [formOpen, setFormOpen] = useState(false)
   const [editing, setEditing] = useState<Transaction | null>(null)
   const [filter, setFilter] = useState<Filter>('all')
-  const currency = profile?.currency ?? 'USD'
+  const currency = profile?.currency ?? 'PKR'
 
   async function load() {
     if (!user) return

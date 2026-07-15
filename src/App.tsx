@@ -10,6 +10,7 @@ import Signup from './pages/Signup'
 
 const Dashboard = lazy(() => import('./pages/Dashboard'))
 const Transactions = lazy(() => import('./pages/Transactions'))
+const Ledger = lazy(() => import('./pages/Ledger'))
 const Goals = lazy(() => import('./pages/Goals'))
 const Settings = lazy(() => import('./pages/Settings'))
 
@@ -44,6 +45,14 @@ export default function App() {
                   element={
                     <Suspense fallback={<PageLoader />}>
                       <Transactions />
+                    </Suspense>
+                  }
+                />
+                <Route
+                  path="/ledger"
+                  element={
+                    <Suspense fallback={<PageLoader />}>
+                      <Ledger />
                     </Suspense>
                   }
                 />

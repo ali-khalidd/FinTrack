@@ -14,7 +14,7 @@ export default function Goals() {
   const [formOpen, setFormOpen] = useState(false)
   const [editing, setEditing] = useState<SavingsGoal | null>(null)
   const [funding, setFunding] = useState<SavingsGoal | null>(null)
-  const currency = profile?.currency ?? 'USD'
+  const currency = profile?.currency ?? 'PKR'
 
   async function load() {
     if (!user) return

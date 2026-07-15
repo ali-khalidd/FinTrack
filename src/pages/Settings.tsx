@@ -5,21 +5,21 @@ import { useAuth } from '../context/AuthContext'
 import { inputClass, labelClass } from '../lib/ui'
 
 const CURRENCIES = [
-  'USD', 'EUR', 'GBP', 'JPY', 'AUD', 'CAD', 'INR', 'NGN', 'ZAR',
-  'BRL', 'MXN', 'AED', 'PKR', 'KES', 'GHS', 'CNY', 'SGD',
+  'PKR', 'USD', 'EUR', 'GBP', 'JPY', 'AUD', 'CAD', 'INR', 'NGN', 'ZAR',
+  'BRL', 'MXN', 'AED', 'KES', 'GHS', 'CNY', 'SGD',
 ]
 
 export default function Settings() {
   const { user, profile, refreshProfile } = useAuth()
   const [goal, setGoal] = useState('0')
-  const [currency, setCurrency] = useState('USD')
+  const [currency, setCurrency] = useState('PKR')
   const [loading, setLoading] = useState(false)
   const [saved, setSaved] = useState(false)
   const [error, setError] = useState<string | null>(null)
 
   useEffect(() => {
     setGoal(String(profile?.monthly_savings_goal ?? 0))
-    setCurrency(profile?.currency ?? 'USD')
+    setCurrency(profile?.currency ?? 'PKR')
   }, [profile])
 
   const handleSubmit = async (e: FormEvent) => {

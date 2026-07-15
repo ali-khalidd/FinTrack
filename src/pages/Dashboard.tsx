@@ -12,7 +12,7 @@ export default function Dashboard() {
   const { user, profile } = useAuth()
   const [transactions, setTransactions] = useState<Transaction[]>([])
   const [loading, setLoading] = useState(true)
-  const currency = profile?.currency ?? 'USD'
+  const currency = profile?.currency ?? 'PKR'
 
   useEffect(() => {
     if (!user) return
